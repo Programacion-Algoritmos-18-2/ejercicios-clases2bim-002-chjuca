@@ -96,12 +96,13 @@ class OperacionesPersona(object):                       #Creacion de la clase Op
         return cadena
 
     def obtener_listado_personas(self,a,b):             # Metodo para presentar los estudnates cuyo nombre empieza con R o J
-        cadena=""
+        lista=[]
         print("ESTUDIANTES CON INICIAL R o J")
         for n in self.listado_personas:
             if (a==n.obtener_nombre()[0].upper() or b==n.obtener_nombre()[0].upper()):  # Se compara los parametros con la primera letra del nombre
-                cadena="%s%s %s\n"%(cadena,n.obtener_nombre(),n.obtener_apellido())
-        return cadena
+                nombre="%s %s"%(n.obtener_nombre(),n.obtener_apellido())
+                lista.append(nombre)
+        return lista
 
     def __str__(self):                                  # Metodo __str__ de la clase
         cadena=""

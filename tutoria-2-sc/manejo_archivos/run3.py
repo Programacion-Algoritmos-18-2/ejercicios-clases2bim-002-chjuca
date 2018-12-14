@@ -21,4 +21,5 @@ print(operaciones.obtener_promedio_n1())                        # Llamamos a las
 print(operaciones.obtener_promedio_n2())
 print(operaciones.obtener_listado_n1())
 print(operaciones.obtener_listado_n2())
-print(operaciones.obtener_listado_personas("R", "J"))
+for n in operaciones.obtener_listado_personas("R", "J"):
+	print(n)
